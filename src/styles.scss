@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+input {
+  @apply border-2 px-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent shadow-md h-8 font-semibold border-gray-200 rounded-md;
+}
+input.invalid {
+  @apply border-red-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent;
+}
+input.valid {
+  @apply border-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent;
+}
+.formGroup {
+  @apply flex flex-col gap-1;
+  label {
+    @apply font-bold;
+  }
+}
